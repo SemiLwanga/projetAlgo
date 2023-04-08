@@ -68,5 +68,42 @@ class Payement:
             self.amount += amount
             
             
+            class Statistiques:
+
+                def __init__(self, liste_dict):
+                    self.liste_dict = liste_dict
+                    
+                    self.nbr_appel, self.nbr_sms, self.internet, self.dure_appel = 0,0,0,0
+                                       
+                    self.statistique,self.stat_dict = [], {}
+                    
+                   
+                def stat(self):
+                    for i in self.liste_dict:
+                        type_call = float(i["type d'appel"])
+                        
+                        if (i['durée'] != ''):
+                        	tempsAppel = float(i['durée'])
+                        else:
+                        	tempsAppel = 0
+                        total_vol = float(i['totalVolume'])
+                        
+                        if (type_call == 0):
+                            self.nbr_appel += 1
+                            self.dure_appel += tempsAppel
+                            
+                        elif (type_call == 1):
+                            self.nbr_sms += 1
+                        else:
+                            self.internet += total_vol
+                    
+                    self.statistique = [self.nbr_appel, self.dure_appel, self.nbr_sms, self.internet]
+                    self.have_stat()
+                    
+                def StatDetails(self):
+                    a = ["Nombre d'appels", "Durée Appel", "SMS", "Forfait Internet"]
+                    self.stat_dict = dict(zip(a, self.statistique))
+        
+            
                  
             
