@@ -1,4 +1,4 @@
-Ce projet contient notre raisonnement en rapport avec le projet 
+Ce repositorycontient notre raisonnement en rapport avec le projet 
 
 Membres du groupe
 - IKINDA BALOMBO CHADRACK
