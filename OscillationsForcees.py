@@ -11,7 +11,7 @@ l'équation du mouvement du système avec
 oscillations libre. Donc F(t) = 100cos(10t) """
 
 def f(v,x):
-    return (v[1],-2*v[1]-400*v[0]+100*np.cos(10*x))
+    return (v[1],-2*v[1]-400*v[0]+10*np.cos(10*x))
 
 x0 = [0.01,0]
 
